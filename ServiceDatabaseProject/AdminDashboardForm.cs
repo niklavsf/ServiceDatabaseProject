@@ -13,7 +13,7 @@ namespace ServiceDatabaseProject
 {
     public partial class AdminDashboardForm : Form
     {
-        private const string AppVersion = "v1.0.0";
+        private const string AppVersion = "v1.1.0";
         private long selectedUserId = 0;
 
         public AdminDashboardForm()
