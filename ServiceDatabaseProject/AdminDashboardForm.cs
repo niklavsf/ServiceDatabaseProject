@@ -918,7 +918,15 @@ namespace ServiceDatabaseProject
                     {
                         if (criteria == "User ID")
                         {
-                            cmd.Parameters.Add(":value", OracleDbType.Int64).Value = Convert.ToInt64(searchText);
+                            long parsedUserId;
+
+                            if (!long.TryParse(searchText, out parsedUserId))
+                            {
+                                MessageBox.Show("User ID must be a number.");
+                                return;
+                            }
+
+                            cmd.Parameters.Add(":value", OracleDbType.Int64).Value = parsedUserId;
                         }
                         else
                         {
