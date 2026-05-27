@@ -13,11 +13,13 @@ namespace ServiceDatabaseProject
 {
     public partial class AdminDashboardForm : Form
     {
+        private const string AppVersion = "v1.0.0";
         private long selectedUserId = 0;
 
         public AdminDashboardForm()
         {
             InitializeComponent();
+            this.Text = "Admin Dashboard " + AppVersion;
             this.StartPosition = FormStartPosition.CenterScreen;
             TablenameCB.Items.Clear();
 
