@@ -753,7 +753,15 @@ namespace ServiceDatabaseProject
 
                     if (searchType == "ID")
                     {
-                        cmd.Parameters.Add(":value", OracleDbType.Int64).Value = Convert.ToInt64(searchText);
+                        long parsedId;
+
+                        if (!long.TryParse(searchText, out parsedId))
+                        {
+                            MessageBox.Show("ID must be a number.");
+                            return;
+                        }
+
+                        cmd.Parameters.Add(":value", OracleDbType.Int64).Value = parsedId;
                     }
                     else
                     {
