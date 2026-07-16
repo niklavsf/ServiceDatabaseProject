@@ -6,7 +6,7 @@ namespace ServiceDatabaseProject
 {
     public partial class HomeScreen : Form
     {
-        public static string connString = $"User Id=C##serviss_admin;Password=freimanis;Data Source=localhost:1521/xe;";
+        public static string connString = $"User Id=C##test_admin;Password=test;Data Source=localhost:1521/xe;";
 
         public static DataSet mainServiceDataSet = new DataSet();
 
@@ -260,7 +260,7 @@ namespace ServiceDatabaseProject
             if (MainScreenDGV.Columns.Contains("Price"))
             {
                 MainScreenDGV.Columns["Price"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
-                MainScreenDGV.Columns["Price"].DefaultCellStyle.Format = "0.00 €";
+                MainScreenDGV.Columns["Price"].DefaultCellStyle.Format = "0.00 Â€";
             }
 
             MainScreenDGV.CellFormatting -= MainScreenDGV_CellFormatting;
