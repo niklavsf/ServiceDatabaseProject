@@ -6,6 +6,14 @@
 - Oracle Database
 - Oracle Managed Data Access
 
+## Funkcijas
+- Lietotāja pievienošana
+- CRUD
+- "Soft delete" funkcija
+- Datu filtrēšana
+- Administratora logs
+- Servisa pārvalde
+
 ## Attēli
 - Pamata skats
 - <img width="730" height="345" alt="image" src="https://github.com/user-attachments/assets/e77cf633-ffb1-4b1a-b743-06e17e5ee6c5" />
